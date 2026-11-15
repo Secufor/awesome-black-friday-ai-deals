@@ -1,0 +1,64 @@
+name: Submit a deal
+description: Suggest a Black Friday / Cyber Monday deal for the list
+title: "Deal: "
+labels: ["new deal"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Product name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Product URL (no affiliate or tracking parameters)
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - AI tools
+        - Developer tools & APIs
+        - Creator, video & design
+        - Productivity, SEO & marketing
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: What it does (one sentence)
+    validations:
+      required: true
+  - type: input
+    id: deal
+    attributes:
+      label: The deal
+      placeholder: 40% off annual plans
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Promo code (leave empty if none)
+  - type: input
+    id: ends
+    attributes:
+      label: End date (YYYY-MM-DD, or "not stated")
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Link to the vendor page that states the deal
+    validations:
+      required: true
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Affiliation
+      options:
+        - label: I work on or for this product
